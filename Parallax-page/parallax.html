@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+      body,
+      html {
+        height: 100%;
+        font-family: 'Lato', sans-serif;      
+        opacity: 0.8;
+    }
+
+      .text h1,
+      .text p {
+        margin: 0;
+        padding: 10px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+      }
+
+      .text p {
+        font-size: 16px;
+      }
+      .text {
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .parallax {
+        position: relative;
+        height: 100%;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .pimg1 {
+        background-image: url("road.jpg");
+      }
+      .pimg2 {
+        background-image: url("Travel.jpg");
+      }
+      .pimg3 {
+        background-image: url("Destination.jpg");
+      }
+
+      .ptext {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        color: whitesmoke;
+        font-size: 27px;
+        letter-spacing: 8px;
+      }
+
+      .ptext span {
+        background-color: rgba(0, 0, 0, 0.863);
+        padding: 20px;
+      }
+    </style>
+    <title>Parallax</title>
+  </head>
+  <body>
+    <div class="parallax pimg1">
+        <div class="ptext">
+            <span>Parallax Website</span>
+        </div>
+    </div>
+    <div class="text" >
+      <h1>The Road</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="parallax pimg2">
+        <div class="ptext" style="color: black;">
+            Explore
+        </div>
+    </div>
+    <div class="text" style="background-color: rgba(0, 0, 0, 0.863); color: white;">
+      <h1>Travel</h1>
+      <p>
+        Nunc pulvinar pharetra felis ut tincidunt. Etiam lectus nibh, egestas
+        non gravida accumsan, commodo eleifend ante. Ut vel tempor mi. Mauris id
+        erat a augue lacinia ultrices a eu risus. Nam maximus urna sit amet
+        commodo fermentum. Sed quis felis eu metus interdum vehicula. Nam sed
+        hendrerit lectus, a semper orci. Pellentesque bibendum massa et commodo
+        convallis. Maecenas vel orci vitae diam hendrerit semper. Phasellus
+        maximus leo nec hendrerit scelerisque.
+      </p>
+    </div>
+    <div class="parallax pimg3">
+        <div class="ptext" style="color: black;">
+            Expand
+        </div>
+    </div>
+    <div class="text">
+      <h1>Destination</h1>
+      <p>
+        Curabitur elementum nulla orci, in pretium magna ullamcorper vel. Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum erat
+        non dignissim accumsan. Nam pretium massa a tempor dignissim. Maecenas
+        consequat orci a euismod egestas. Donec at sagittis enim. Fusce sed
+        venenatis mauris. Sed facilisis metus felis, non placerat erat bibendum
+        vitae. Proin laoreet hendrerit cursus. Nulla a sapien id sem varius
+        vulputate. Fusce dictum massa efficitur dolor sollicitudin convallis.
+        Nulla facilisi. Etiam accumsan nibh eu sem iaculis, ultricies volutpat
+        tortor porttitor. Sed ultricies malesuada nulla, et vulputate risus
+        semper eu.
+      </p>
+    </div>
+  </body>
+</html>

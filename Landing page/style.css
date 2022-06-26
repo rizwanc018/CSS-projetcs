@@ -21,31 +21,28 @@ body {
 
 .navbar {
     background-color: #ff9800a8;
-    position: absolute;
-    padding: 8px;
-    width: 100%;
-}
-
-.navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+
 }
 
-li {
-    float: right;
+.navbar {
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+.brand {
+    font-size: 30px;
+    margin-right: auto;
 }
 
 a {
     text-decoration: none;
 }
 
-li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: large;
-}
 
 .navbar a:hover {
     color: black;
@@ -61,11 +58,6 @@ li a {
     /* background-color: red; */
 }
 
-.left {
-    font-weight: bolder;
-    font-size: 66px;
-}
-
 .text1 p {
     display: inline-block;
     font-size: 96px;
@@ -79,4 +71,11 @@ li a {
     padding: 5px 20px;
     margin: 50px;
     border-radius: 50%;
+    border: 3px solid sandybrown;
+}
+
+.text1 a:hover {
+    color: black;
+    border: rgb(206, 105, 16) solid 5px;
+    box-shadow:  3px 5px 5px 5px rgba(181, 165, 81, 0.73);
 }

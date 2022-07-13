@@ -1,0 +1,114 @@
+:root {
+    --gradient: linear-gradient(45deg, #ee6352, purple, #ee6352);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    font-family: 'Roboto Slab', serif;
+    grid-template-columns: repeat(7, minmax(auto, 1fr));
+    grid-template-rows: repeat(7, minmax(auto, 1fr));
+
+}
+
+.navbar {
+    grid-column: 2 / span 6;
+}
+
+.gradient-bar {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 3;
+}
+
+.footer {
+    grid-column: 1 / 2;
+    grid-row: 4 / 8;
+    /* border: 2px solid red; */
+}
+
+.square {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+
+.flexbox {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+ul {
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.footer {
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.footer a {
+    font-size: .75rem;
+    transform: rotateZ(-90deg);
+    padding-left: 2rem;
+}
+
+.square {
+    padding: 0 2rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.gradient {
+    background-image: var(--gradient);
+    background-size: 300%;
+}
+
+.img-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.right-down {
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3rem;
+}

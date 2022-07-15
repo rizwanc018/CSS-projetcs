@@ -1,0 +1,150 @@
+* {
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
+
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.landing, .menu-div, .story {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing {
+    background-image: url(images/coffee-grinder.jpg);
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;    
+    padding: 10rem 0;
+    color: white;
+    text-align: center;
+}
+
+.menu-div {
+    background-color: hsl(240, 4%, 89%);
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.story {
+    text-align: center;
+    color: white;
+    padding: 4rem 0 0 0;
+    background-image: linear-gradient(hsl(0, 0%, 9%),hsla(0, 0%, 60%, 0.1));
+}
+
+.story p, .story h1 {
+    margin: 0;
+}
+
+.story p {
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.story img {
+    z-index: -1;
+    width: 100%;
+    /* box-shadow: 0px 56px 100px 10px hsl(0, 0%, 9%) inset; */   
+}
+
+.fresh-beans {
+    color: black;
+    padding: 3rem 3rem;
+}
+
+.fresh-beans img {
+    display: none;
+}
+
+.great-coffe {
+    background-image: url(images/beans-&-powder.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 8rem 3rem;
+}
+
+.great-coffe::before {
+    content: ' ';
+    background: hsla(240, 4%, 89%, 0.123);
+    position: absolute;
+    inset: 0;
+    /* mix-blend-mode: luminosity; */
+}
+
+
+.about-us {
+    background-image: url(images/about-us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 4rem;
+    position: relative;
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    text-align: center;
+}
+
+.about-us::before {
+    content: ' ';
+    background-image: linear-gradient(hsl(0, 0%, 19%),hsla(0, 0%, 30%, 0.615));
+    position: absolute;
+    inset: 0;    
+    mix-blend-mode: lighten;
+}
+
+.icon-1, .icon-2, .icon-3 {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.icon-1::after, .icon-2::after, .icon-3::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-1::after {
+    content: 'BEST BEANS';
+}
+
+.icon-2::after {
+    content: 'QUALITY MILK';
+}
+
+.icon-3::after {
+    content: 'PERFECT BLEND';
+}
+
+.cake-image {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cake-image img {
+    flex: 1;
+    /* width: 100%;
+    height: 30%;*/
+    object-fit: cover; 
+}
+
+

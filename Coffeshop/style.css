@@ -1,8 +1,15 @@
-* {
-    /* box-sizing: border-box; */
-    /* overflow: hidden; */
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+:root {
+    --normal-clr:hsl(240, 4%, 89%);
+    --cover-clr: hsla(0, 0%, 0%, 0.5);
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
 
 body {
     margin: 0;
@@ -15,6 +22,104 @@ ul {
 
 a {
     text-decoration: none;
+    /* color:white; */
+}
+
+
+nav ul {
+    /* padding: .75rem 0 0 0; */
+    padding: 1.5rem ;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+header {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    /* border-top: 1px solid brown; */
+    position: absolute;
+    background: white;
+    width: 80%;
+    left: 10%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease;
+}
+
+nav a {
+    color: black;
+}
+
+header h1 {
+    margin: 0;
+    padding: .3rem;
+}
+
+
+.title, h3, h4, button {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.title {
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.nav-toggle:checked ~ nav {
+    /* display: block; */
+    transform: scale(1,1);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 1em;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after  {
+
+    background: black;
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: ' ';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after {
+    top: 5px;
 }
 
 .landing, .menu-div, .story {
@@ -25,11 +130,12 @@ a {
     align-items: center;
 }
 
+
 .landing {
     background-image: url(images/coffee-grinder.jpg);
     /* object-fit: cover; */
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     background-position: center;    
     padding: 10rem 0;
@@ -38,7 +144,7 @@ a {
 }
 
 .menu-div {
-    background-color: hsl(240, 4%, 89%);
+    background-color: var(--normal-clr);
     padding: 5rem 3rem;
     text-align: center;
 }
@@ -47,7 +153,8 @@ a {
     text-align: center;
     color: white;
     padding: 4rem 0 0 0;
-    background-image: linear-gradient(hsl(0, 0%, 9%),hsla(0, 0%, 60%, 0.1));
+    background-image: linear-gradient(hsl(0, 0%, 1%),hsla(0, 0%, 3%, 0.4));
+    background-blend-mode: color-burn;
 }
 
 .story p, .story h1 {
@@ -61,6 +168,7 @@ a {
 .story img {
     z-index: -1;
     width: 100%;
+
     /* box-shadow: 0px 56px 100px 10px hsl(0, 0%, 9%) inset; */   
 }
 
@@ -74,23 +182,29 @@ a {
 }
 
 .great-coffe {
+    background-color: var(--cover-clr);
     background-image: url(images/beans-&-powder.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     position: relative;
     padding: 8rem 3rem;
+    background-blend-mode: overlay;
+    color: white;
 }
 
-.great-coffe::before {
+/* .great-coffe::before {
     content: ' ';
-    background: hsla(240, 4%, 89%, 0.123);
+    background: var(--cover-clr);
     position: absolute;
     inset: 0;
-    /* mix-blend-mode: luminosity; */
-}
+    mix-blend-mode: darken;
+} */
 
 
 .about-us {
+    /* background-image: linear-gradient(hsl(0, 0%, 19%),hsla(0, 0%, 30%, 0.615)); */
+    background-color: var(--cover-clr);
     background-image: url(images/about-us.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,15 +215,16 @@ a {
     flex-direction: column;
     justify-content: center; */
     text-align: center;
+    background-blend-mode: overlay;
 }
 
-.about-us::before {
+/* .about-us::before {
     content: ' ';
     background-image: linear-gradient(hsl(0, 0%, 19%),hsla(0, 0%, 30%, 0.615));
     position: absolute;
     inset: 0;    
     mix-blend-mode: lighten;
-}
+} */
 
 .icon-1, .icon-2, .icon-3 {
     position: relative;
@@ -117,6 +232,7 @@ a {
 }
 
 .icon-1::after, .icon-2::after, .icon-3::after {
+    font-family: 'Oswald', sans-serif;
     position: absolute;
     top: 100%;
     left: 50%;
@@ -145,6 +261,73 @@ a {
     /* width: 100%;
     height: 30%;*/
     object-fit: cover; 
+}
+
+.blog {
+    text-align: center;
+    background: var(--normal-clr);
+    padding: 5rem 0;
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: justify;
+}
+
+.blog-cards > div {
+    width: 75vw;
+    /* box-shadow: 0 0 2px hsl(0, 0%, 1%); */
+    background: white;
+}
+
+.blog-cards img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-cards h4, .blog-cards p {
+    padding: 0 1rem;
+}
+
+footer {
+    color: white;
+}
+
+.come-in {
+    background-color: var(--cover-clr);
+    background-image: url(images/coffe-cream.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: overlay;
+}
+
+.content {
+    margin: 0 3rem;
+    padding: 5rem 0;
+    /* z-index: 11;
+    color: white; */
+}
+
+.contact {
+    background: black;
+}
+
+button {
+    background-color: #dca57d;
+    padding: 1rem 1.5rem;
+    border: 0;
+    box-shadow: 0;
+    margin-top: 1rem;
+}
+
+button a {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 15px;
 }
 
 

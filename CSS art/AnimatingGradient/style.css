@@ -1,5 +1,5 @@
 :root {
-    --gradient: linear-gradient(90deg, #ee6352, purple, #ee6352);
+    --gradient: linear-gradient(90deg, hsl(7, 82%, 63%), purple, #ee6352);
   }
 
   * {

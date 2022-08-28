@@ -14,12 +14,9 @@ body {
 .clock {
     width: 25rem;
     height: 25rem;
-    /* border: 1rem solid brown; */
     border-radius: 50%;
     position: relative;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 
 }
 
@@ -106,28 +103,27 @@ body {
 .second-hand {
     bottom: 50%;
     left: 50%;
-    /* transform: translateX(-5rem); */
     transform-origin: bottom;
 }
 
 .hour-hand {
     height: 25%;
     width: .7rem;
-    animation: run 21600s infinite;
+    animation: run 216000s infinite;
     animation-timing-function: linear;
 }
 
 .minute-hand {
     height: 44%;
     width: .5rem;
-    animation: run 360s infinite;
+    animation: run 3600s infinite;
     animation-timing-function: linear;
 }
 
 .second-hand {
     height: 45%;
     width: .2rem;
-    animation: run 6s infinite;
+    animation: run 60s infinite;
     animation-timing-function: linear;
 }
 

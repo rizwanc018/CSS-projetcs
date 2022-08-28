@@ -108,7 +108,7 @@ p {
 
 
 .title {
-    font-size: 45px;
+    font-size: 50px;
     letter-spacing: 2px;
 }
 
@@ -416,22 +416,22 @@ button a {
     margin: 0;
 }
 
-.align-left {
-    transform: translateX(-30%);
-}
-
-.align-right {
-    transform: translateX(60%);
-}
-
 .opacity-effect {
     opacity: 0;
     transform: scale(.85);
     transition: transform .7s, opacity .5s;
 }
 
- .active {
-    opacity: 1; 
+.align-left {
+    transform: translateX(-30%) scale(.85);
+}
+
+.align-right {
+    transform: translateX(60%) scale(.85);
+}
+
+.active {
+    opacity: 1;
     transform: translate(0) scale(1);
 }
 
@@ -539,6 +539,6 @@ button a {
     }
 
 
-    
+
 
 }

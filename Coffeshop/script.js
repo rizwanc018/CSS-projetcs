@@ -17,7 +17,7 @@ const sliderObjs = document.querySelectorAll('.opacity-effect');
 
 function checkSlide() {
     sliderObjs.forEach(sliderObj => {
-        const slideInAt = (window.scrollY + window.innerHeight) - sliderObj.offsetHeight / 4;
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderObj.offsetHeight / 6;
         const isHalfShown = slideInAt > sliderObj.offsetTop;
         const objBottom = sliderObj.offsetTop + sliderObj.offsetHeight;
         const isNotScrolledPAst = window.scrollY < objBottom;
@@ -42,4 +42,4 @@ function checkSlide() {
 
 }
 
-window.addEventListener('scroll', debounce(checkSlide), 300);
+window.addEventListener('scroll', debounce(checkSlide), 100);
